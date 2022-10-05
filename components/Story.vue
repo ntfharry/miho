@@ -14,7 +14,7 @@
       </div>
 
       <div class="col-4 text-center">
-        <img src="/images/miho.png" alt="miho" />
+        <img src="images/miho.png" alt="miho" />
 
         <div>반려여우 미호 (Miho)</div>
       </div>

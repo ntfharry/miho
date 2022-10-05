@@ -1,6 +1,6 @@
 <template>
   <footer class="pl-5">
-    <img class="icons mt-4" src="/icons/ntf.svg" alt="logo">
+    <img class="icons mt-4" src="icons/ntf.svg" alt="logo">
 
     <div class="ml-3 mt-2">
       copyrigth ⓒ 2022 Nine tail fox lab. All rights Resesrved. 

@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar px-5">
     <div class="navbar__logo">
-      <img class="icons mr-3" src="/icons/fox.svg" alt="logo">
+      <img class="icons mr-3" src="icons/fox.svg" alt="logo">
       <a class="mr-3" href="">아기여우 키우기</a>
-      <img class="icons" src="/icons/wallet.svg" alt="wallet">
+      <img class="icons" src="icons/wallet.svg" alt="wallet">
     </div>
 
     <ul :class="['navbar__menu', { 'active': navOpen }]">
@@ -16,7 +16,7 @@
     </ul>
 
     <a class="navbar__toggleBtn" @click="navOpen = !navOpen">
-      <img class="icons" src="/icons/menu.svg" alt="menu">
+      <img class="icons" src="icons/menu.svg" alt="menu">
     </a>
   </nav>
 </template>

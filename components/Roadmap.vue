@@ -3,7 +3,7 @@
     <h1 class="mb-4">Roadmap</h1>
     <hr class="mb-5" />
 
-    <img src="/images/roadmap.png" />
+    <img src="images/roadmap.png" />
   </div>
 </template>
 
