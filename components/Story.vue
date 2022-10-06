@@ -10,7 +10,9 @@
         <h5>아기 여우는 주인의 사랑과 정성으로 꼬리 9개가 달린 어른 여우로 성장하고, 주인들의 취향에 따라 각기 다른 특성을 가지게 됩니다.</h5>
         <h5 class="bold">과연, 당신의 여우는 어떠한 특성을 가진 여우로 성장할까요?</h5>
     
-        <button type="button" class="btn btn-primary btn-lg">미호 분양받기</button>
+        <button type="button" class="btn btn-primary btn-lg" @click="mint">
+          미호 분양받기
+        </button>
       </div>
 
       <div class="col-4 text-center">
@@ -21,6 +23,38 @@
     </div>
   </div>
 </template>
+
+<script>
+import { ABI, ADDR } from '@/plugin/test.js';
+
+export default {
+  methods: {
+    async mint() {
+      const { klaytn } = window;
+      if (!klaytn || !klaytn.isKaikas) {
+        alert('KAIKAS 확장프로그램 설치가 필요합니다');
+        return;
+      }
+
+      await klaytn.enable();
+      
+      setTimeout(() => {
+        const myContract = new caver.klay.Contract(ABI, ADDR);
+
+        myContract.methods.mintSingle().send({
+          from : klaytn.selectedAddress,
+          gas: 1000000
+        })
+        .then(() => {
+          alert('분양 완료')
+        }).catch(() => {
+          alert('다시 시도해주세요')
+        });
+      }, 500);
+    }
+  }
+}
+</script>
 
 <style scoped>
 h5 {
