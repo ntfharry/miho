@@ -1,9 +1,16 @@
 <template>
   <nav class="navbar px-5">
     <div class="navbar__logo">
-      <img class="icons mr-3" src="icons/fox.svg" alt="logo">
-      <a class="mr-3" href="">아기여우 키우기</a>
-      <img class="icons" src="icons/wallet.svg" alt="wallet">
+      <img class="icons mr-3" src="icons/fox.svg" alt="logo" @click="$router.push('/')">
+      <template v-if="!isConnected">
+        <a class="mr-3" @click="$router.push('/')">아기여우 키우기</a>
+        <img class="icons" src="icons/wallet.svg" alt="wallet" @click="connect">
+      </template>
+      <template v-else>
+        <a class="mr-3" @click="$router.push('step1')">Step1</a>
+        <a class="mr-3" @click="$router.push('step2')">Step2</a>
+        <img class="icons" src="icons/connect.svg" alt="connect">
+      </template>
     </div>
 
     <ul :class="['navbar__menu', { 'active': navOpen }]">
@@ -25,7 +32,20 @@
 export default {
   data() {
     return {
-      navOpen: false
+      navOpen: false,
+      provider: null
+    }
+  },
+
+  mounted() {
+    if(typeof window.klaytn !== 'undefined') {
+      this.provider = window['klaytn'];
+    }
+  },
+
+  computed: {
+    isConnected() {
+      return this.provider && this.provider.selectedAddress != undefined;
     }
   },
 
@@ -37,6 +57,16 @@ export default {
     goToPage(page) {
       this.$router.push(page);
       this.navOpen = false;
+    },
+
+    async connect() {
+      const { klaytn } = window;
+      if (!klaytn || !klaytn.isKaikas) {
+        alert('KAIKAS 확장프로그램 설치가 필요합니다');
+        return;
+      }
+
+      await klaytn.enable();
     }
   }
 }
