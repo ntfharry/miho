@@ -25,6 +25,7 @@ export default {
 <style>
 #container {
   min-height: 70vh;
+  margin-top: 150px;
 }
 
 h1 {

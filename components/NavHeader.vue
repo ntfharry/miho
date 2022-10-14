@@ -1,31 +1,33 @@
 <template>
-  <nav class="navbar px-5">
-    <div class="navbar__logo">
-      <img class="icons mr-3" src="icons/fox.svg" alt="logo" @click="$router.push('/')">
-      <template v-if="!isConnected">
-        <a class="mr-3" @click="$router.push('/')">아기여우 키우기</a>
-        <img class="icons" src="icons/wallet.svg" alt="wallet" @click="connect">
-      </template>
-      <template v-else>
-        <a class="mr-3" @click="$router.push('step1')">Step1</a>
-        <a class="mr-3" @click="$router.push('step2')">Step2</a>
-        <img class="icons" src="icons/connect.svg" alt="connect">
-      </template>
-    </div>
+  <div id="fixed-wrap">
+    <nav class="navbar px-5">
+      <div class="navbar__logo">
+        <img class="icons mr-3 pointer" src="icons/fox.svg" alt="logo" @click="$router.push('/')">
+        <template v-if="!isConnected">
+          <a class="mr-3 pointer" @click="$router.push('/')">아기여우 키우기</a>
+          <img class="icons pointer" src="icons/wallet.svg" alt="wallet" @click="connect">
+        </template>
+        <template v-else>
+          <a class="mr-3 pointer" @click="$router.push('step1')">Step1</a>
+          <a class="mr-3 pointer" @click="$router.push('step2')">Step2</a>
+          <img class="icons" src="icons/connect.svg" alt="connect">
+        </template>
+      </div>
 
-    <ul :class="['navbar__menu', { 'active': navOpen }]">
-      <li><a href="#story">Story</a></li>
-      <li><a href="#howto">How to</a></li>
-      <li><a href="#vision">Vision</a></li>
-      <li><a href="#roadmap">Roadmap</a></li>
-      <li><a href="#comunity">Community</a></li>
-      <li><a href="#team">Team</a></li>
-    </ul>
+      <ul :class="['navbar__menu', { 'active': navOpen }]">
+        <li><a href="#story">Story</a></li>
+        <li><a href="#howto">How to</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#comunity">Community</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
 
-    <a class="navbar__toggleBtn" @click="navOpen = !navOpen">
-      <img class="icons" src="icons/menu.svg" alt="menu">
-    </a>
-  </nav>
+      <a class="navbar__toggleBtn" @click="navOpen = !navOpen">
+        <img class="icons" src="icons/menu.svg" alt="menu">
+      </a>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -82,6 +84,17 @@ a {
   text-decoration: none;
   color: #1F3995;
   font-weight: bold;
+}
+
+#fixed-wrap {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .navbar {
