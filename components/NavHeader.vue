@@ -149,7 +149,7 @@ a {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 8px 24px;
+    padding: 24px 24px;
   }
   .navbar__menu {
     display: none;

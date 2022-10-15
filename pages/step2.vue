@@ -4,30 +4,30 @@
     <h1 class="text-center">
       오늘은 미호를 위해 어떤 활동을 할까요?
     </h1>
-    <div class="row text-center m-5 p-5">
-      <div class="col">
+    <div class="row text-center m-4 p-5">
+      <div class="col-sm-3">
         <div>
           <img src="images/food.png" alt="food">
         </div>
-        <h4 class="mt-5">음식</h4>
+        <h4 class="my-5">음식</h4>
       </div>
-      <div class="col">
+      <div class="col-sm-3">
         <div>
           <img src="images/drink.png" alt="drink">
         </div>
-        <h4 class="mt-5">음료</h4>
+        <h4 class="my-5">음료</h4>
       </div>
-      <div class="col">
+      <div class="col-sm-3">
         <div>
           <img src="images/helth.png" alt="helth">
         </div>
-        <h4 class="mt-5">운동</h4>
+        <h4 class="my-5">운동</h4>
       </div>
-      <div class="col">
+      <div class="col-sm-3">
         <div>
           <img src="images/hobby.png" alt="hobby">
         </div>
-        <h4 class="mt-5">취미</h4>
+        <h4 class="my-5">취미</h4>
       </div>
     </div>
   </div>
@@ -74,5 +74,9 @@ h1 {
 
 h4 {
   color: #1F3995;
+}
+
+img {
+  width: 100%;
 }
 </style>
