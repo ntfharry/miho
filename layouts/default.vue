@@ -28,12 +28,8 @@ export default {
   margin-top: 150px;
 }
 
-h2 {
+h1 {
   color: #1F3995;
-}
-
-h5 {
-  font-size: 1.2rem;
 }
 
 hr {
@@ -52,6 +48,14 @@ hr {
 @media screen and (max-width: 600px) {
   .m-5 {
     margin: 0 !important;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
   }
 }
 </style>

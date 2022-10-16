@@ -1,6 +1,6 @@
 <template>
     <div id="section" class="my-5">
-        <h2 class="mb-5">Wanna Fantasy World?</h2>
+        <h1 class="mb-5">Wanna Fantasy World?</h1>
         <h5 class="mb-5">당신을 닮은 ‘애완여우’를 키워보세요.</h5>
         <h5>사랑과 정성으로 키운 여우 미호(Miho)가</h5>
         <h5>청구계로 갈 수 있는 특별한 티켓을 건낼지도 모릅니다.</h5>
@@ -18,7 +18,7 @@
     align-items: center;
 }
 
-h2, h5 {
+h1, h5 {
     font-weight: bold;
 }
 </style>
