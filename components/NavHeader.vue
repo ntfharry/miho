@@ -15,12 +15,12 @@
       </div>
 
       <ul :class="['navbar__menu', { 'active': navOpen }]">
-        <li><a href="#story">Story</a></li>
-        <li><a href="#howto">How to</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#roadmap">Roadmap</a></li>
-        <li><a href="#comunity">Community</a></li>
-        <li><a href="#team">Team</a></li>
+        <li><a href="#story" @click="navTogle">Story</a></li>
+        <li><a href="#howto" @click="navTogle">How to</a></li>
+        <li><a href="#vision" @click="navTogle">Vision</a></li>
+        <li><a href="#roadmap" @click="navTogle">Roadmap</a></li>
+        <li><a href="#comunity" @click="navTogle">Community</a></li>
+        <li><a href="#team" @click="navTogle">Team</a></li>
       </ul>
 
       <a class="navbar__toggleBtn" @click="navOpen = !navOpen">
@@ -145,7 +145,7 @@ a {
   font-size: 24px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 860px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
