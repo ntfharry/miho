@@ -45,7 +45,7 @@ hr {
   font-weight: bold;   
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 860px) {
   .m-5 {
     margin: 0 !important;
   }
