@@ -40,3 +40,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+div {
+  padding-top: 120px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+</style>
